@@ -1,4 +1,4 @@
-import React, { createContext, useState, type ReactNode } from "react";
+import { createContext, useState, type ReactNode } from "react";
 
 interface CreateCycleData {
     task: string;
@@ -68,8 +68,6 @@ export function CyclesContextProvider({ children }: CyclesContextProviderProps) 
         setCycles((state) => [...state, newCycle]);
         setActiveCycleId(id);
         setAmountSecondsPassed(0);
-
-        // reset();
     }
 
     function interruptCurrentCycle() {
